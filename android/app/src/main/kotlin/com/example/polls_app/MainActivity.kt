@@ -1,4 +1,4 @@
-package com.example.polls_app
+package com.poxels.pollsApp
 
 import io.flutter.embedding.android.FlutterActivity
 
