@@ -9,6 +9,7 @@ class TextInputField extends StatelessWidget {
     required this.hint,
     required this.inputType,
     required this.inputAction,
+    required this.inputController,
     this.hideInput = false,
   }) : super(key: key);
 
@@ -16,6 +17,7 @@ class TextInputField extends StatelessWidget {
   final String hint;
   final TextInputType inputType;
   final TextInputAction inputAction;
+  final TextEditingController inputController;
   final bool hideInput;
 
   @override
@@ -32,20 +34,20 @@ class TextInputField extends StatelessWidget {
         ),
         child: Center(
           child: TextField(
-            decoration: InputDecoration(
-              border: InputBorder.none,
-              prefixIcon: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Icon(icon, size: 18, color: kWhite),
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                prefixIcon: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Icon(icon, size: 18, color: kWhite),
+                ),
+                labelText: hint,
+                labelStyle: kBodyText,
               ),
-              labelText: hint,
-              labelStyle: kBodyText,
-            ),
-            style: kBodyText,
-            keyboardType: inputType,
-            textInputAction: inputAction,
-            obscureText: hideInput,
-          ),
+              style: kBodyText,
+              keyboardType: inputType,
+              textInputAction: inputAction,
+              obscureText: hideInput,
+              controller: inputController),
         ),
       ),
     );
