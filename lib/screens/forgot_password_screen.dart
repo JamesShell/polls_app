@@ -5,8 +5,21 @@ import 'package:polls_app/widgets/background_image.dart';
 import 'package:polls_app/widgets/rounded_button.dart';
 import 'package:polls_app/widgets/text_input_field.dart';
 
-class ForgotPasswordScreen extends StatelessWidget {
+class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({Key? key}) : super(key: key);
+
+  @override
+  State<ForgotPasswordScreen> createState() => _ForgotPasswordScreenState();
+}
+
+class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
+  final TextEditingController _emailController = TextEditingController();
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,11 +62,12 @@ class ForgotPasswordScreen extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                const TextInputField(
+                TextInputField(
                   icon: FontAwesomeIcons.envelope,
                   hint: "Email",
                   inputType: TextInputType.emailAddress,
                   inputAction: TextInputAction.done,
+                  inputController: _emailController,
                 ),
                 RoundedButton(content: "Send Code", onPressed: () => {})
               ],
