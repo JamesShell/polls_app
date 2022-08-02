@@ -106,7 +106,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                         child: const Text(
                           'Forgot Password',
-                          style: kBodyText,
                         ),
                       ),
                       const SizedBox(
@@ -133,7 +132,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       child: const Text(
                         'Create New Account',
-                        style: kBodyText,
                       ),
                     ),
                   ),

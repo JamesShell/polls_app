@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:polls_app/utils/pallete.dart';
 import 'firebase_options.dart';
 
@@ -46,11 +47,18 @@ class MyApp extends StatelessWidget {
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
               theme: ThemeData(
-                appBarTheme: const AppBarTheme(
+                appBarTheme: AppBarTheme(
                   color: kBlue,
-                  titleTextStyle: kBodyText,
-                  toolbarTextStyle: kBodyText,
+                  titleTextStyle:
+                      GoogleFonts.signika(fontSize: 16, color: Colors.white),
+                  toolbarTextStyle:
+                      GoogleFonts.signika(fontSize: 16, color: Colors.white),
                 ),
+                textTheme: GoogleFonts.signikaTextTheme(
+                    Theme.of(context).textTheme.apply(
+                          bodyColor: Colors.white,
+                          displayColor: Colors.white,
+                        )),
                 scaffoldBackgroundColor: kWhite,
               ),
               title: 'Polls Up',

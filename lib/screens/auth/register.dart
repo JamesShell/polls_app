@@ -234,7 +234,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               bottom: BorderSide(width: 1, color: kWhite),
                             ),
                           ),
-                          child: const Text(
+                          child: Text(
                             'Aleady Have an Account?',
                             style: kBodyText,
                           ),

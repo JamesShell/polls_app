@@ -31,7 +31,6 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
             backgroundColor: Colors.transparent,
             title: const Text(
               'Forgot Password',
-              style: kBodyText,
             ),
             leading: IconButton(
               icon: const Icon(
@@ -56,7 +55,6 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   width: MediaQuery.of(context).size.width * 0.8,
                   child: const Text(
                     'Please enter your email adress to recive a 4 digit verification code.',
-                    style: kBodyText,
                   ),
                 ),
                 const SizedBox(

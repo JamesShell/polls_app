@@ -19,7 +19,6 @@ class Poll extends StatelessWidget {
                 child: const Center(
                   child: Text(
                     '1st Option',
-                    style: kBodyText,
                   ),
                 ),
               ),
@@ -31,7 +30,6 @@ class Poll extends StatelessWidget {
                 child: const Center(
                   child: Text(
                     '2nd Option',
-                    style: kBodyText,
                   ),
                 ),
               ),
@@ -54,7 +52,6 @@ class Poll extends StatelessWidget {
           child: const Center(
             child: Text(
               'OR',
-              style: kBodyText,
             ),
           ),
         ),
